@@ -1,10 +1,14 @@
+(function (exports, require, module, __filename, __dirname) {
 
-var url = 'http://mylogger.io/log';
+    console.log
+    var url = 'http://mylogger.io/log';
 
-function log(message) {
-    // Send a HTTP request
-    console.log(message);
-}
+    function log(message) {
+        // Send a HTTP request
+        console.log(message);
+    }
 
-module.exports.log = log;
-module.exports.endpoint = url;
+    module.exports = log;
+    module.exports.endpoint = url;
+    exports.log = log;
+})
